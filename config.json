@@ -1,0 +1,29 @@
+{
+  "name": "WLED Pro Auto-Backup",
+  "version": "1.6.2",
+  "slug": "wled_pro_backup",
+  "description": "Auto-backup WLED using direct /presets.json file access for maximum reliability.",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "hassio_api": true,
+  "homeassistant_api": true,
+  "homeassistant_role": "manager",
+  "options": {
+    "storage_root": "share",
+    "storage_subfolder": "wled_backups",
+    "interval_value": 24,
+    "interval_unit": "hours",
+    "retention_days": 30,
+    "include_presets": true
+  },
+  "schema": {
+    "storage_root": "list(share|media|backup)",
+    "storage_subfolder": "str",
+    "interval_value": "int(1,)",
+    "interval_unit": "list(minutes|hours|days)",
+    "retention_days": "int(1,)",
+    "include_presets": "bool"
+  },
+  "map": ["share:rw", "backup:rw", "media:rw"]
+}
