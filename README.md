@@ -25,7 +25,7 @@ Whether you are running on a Raspberry Pi SD card or a high-capacity NAS, this a
 
 ### Method 1: Local Add-on (Recommended for custom tweaks)
 1.  Using the **Samba Share** or **VS Code** add-on, navigate to your Home Assistant root directory.
-2.  Create a folder named `addons` (if it doesn't already exist).
+2.  Create a folder  `/addons` (if it doesn't already exist).
 3.  Inside `addons`, create a folder named `wled_pro_backup`.
 4.  Upload the `config.json`, `Dockerfile`, and `backup.py` files from this repository into that folder.
 5.  In Home Assistant, go to **Settings** > **Add-ons** > **Add-on Store**.
